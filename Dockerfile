@@ -9,5 +9,3 @@ COPY default.cnf /etc/mysql/mariadb.conf.d/99-default.cnf
 
 EXPOSE 3306
 CMD ["mysqld"]
-
-HEALTHCHECK --start-period=5m CMD mariadb -e 'SELECT @@datadir;' || exit 1
